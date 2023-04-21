@@ -1,8 +1,38 @@
 /* Import font Noto Sans Japanese */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #101820;
+}
+.wrapper {
+  background: #101820;
+  width: 800px;
+  padding: auto;
+}
+.wrapper .content-box {
+  padding: auto;
+}
+.typing-text p {
+  font-size: 30px;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+}
+.content-box .content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.content .result-details{
+    display: flex;
+    list-style: none;
 }
