@@ -31,6 +31,13 @@ body {
   text-align: justify;
   letter-spacing: 0.5px;
   word-break: break-all;
+  color: #cf6bdd;
+}
+.typing-test p span.correct {
+  color: #eedaea;
+}
+.typing-test p span.incorrect {
+  color: #ff5253;
 }
 .content-box .content {
   display: flex;
@@ -43,7 +50,7 @@ body {
 .content button {
   border: none;
   outline: none;
-  background: #eedaea;
+  background: #cf6bdd;
   width: 110px;
   color: #101820;
   cursor: pointer;
@@ -52,14 +59,18 @@ body {
   border-radius: 15px;
   transition: transform 0.3s ease;
 }
-.content button:active{
-    transform: scale(0.90);
+.content span.num {
+  color: #eedaea;
+}
+.content button:active {
+  transform: scale(0.9);
 }
 .content .result-details {
   display: flex;
   width: calc(100% - 140px);
   justify-content: space-between;
   list-style: none;
+  color: #cf6bdd;
 }
 .typing-test::-webkit-scrollbar {
   width: 0;
