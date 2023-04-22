@@ -43,17 +43,23 @@ body {
 .typing-test p span.incorrect {
   color: #ff5253;
 }
-/* typing-test p span.active {
-  color: white;
-} */
-/* typing-test p span.active::before{
+typing-test p span.active {
+  color: #eedaea;
+}
+.typing-test p span.active::before{
     content: "";
-    width: 5px;
-    height: 20px;
+    width: 2px;
+    height: 26px;
     background: #ec7fff;
     display: inline-block;
-    color: whitesmoke;
-} */
+    color: #eedaea;
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
 .content-box .content {
   display: flex;
   margin-bottom: 17px;
