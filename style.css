@@ -14,25 +14,69 @@ body {
   background-color: #101820;
 }
 .wrapper {
-  background: #101820;
+  /* background: whitesmoke; */
   width: 800px;
   padding: auto;
+  padding: 12px;
 }
 .wrapper .content-box {
-  padding: auto;
+  padding: 20px 13px 0;
 }
-.typing-text p {
+.content-box .typing-test {
+  max-height: 255px;
+  overflow-y: auto;
+}
+.typing-test p {
   font-size: 30px;
   text-align: justify;
   letter-spacing: 0.5px;
   word-break: break-all;
 }
-.content-box .content{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.content-box .content {
+  display: flex;
+  margin-bottom: 17px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
 }
-.content .result-details{
-    display: flex;
-    list-style: none;
+.content button {
+  border: none;
+  outline: none;
+  background: #eedaea;
+  width: 110px;
+  color: #101820;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.content button:active{
+    transform: scale(0.90);
+}
+.content .result-details {
+  display: flex;
+  width: calc(100% - 140px);
+  justify-content: space-between;
+  list-style: none;
+}
+.typing-test::-webkit-scrollbar {
+  width: 0;
+}
+.result-details li {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+.result-details li p {
+  font-size: 20px;
+}
+.result-details li span {
+  display: block;
+  font-size: 25px;
+  margin-left: 5px;
+}
+.result-details li b {
+  font-weight: 500;
 }
