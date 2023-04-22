@@ -3,6 +3,11 @@ const inputField = document.querySelector(".wrapper .input");
 let charInd = 0;
 const mistake = document.querySelector(".mistake span");
 let mistk = 0;
+const timeTag = document.querySelector(".time span b");
+let timer;
+let maxTime = 60;
+let timeLeft = maxTime;
+let isTyping;
 
 function pickRamdomQuote() {
   let randomIn = Math.floor(Math.random() * quotes.length);
@@ -18,6 +23,11 @@ function pickRamdomQuote() {
 function initTyping() {
   const charac = typingTest.querySelectorAll("span");
   let typedChar = inputField.value.split("")[charInd];
+  if (!isTyping) {
+    timer = setInterval(initTimer, 1000);
+    isTyping = true;
+  }
+
   if (typedChar == null) {
     charInd--;
     if (charac[charInd].classList.contains("incorrect")) {
@@ -36,6 +46,18 @@ function initTyping() {
   charac.forEach((span) => span.classList.remove("active"));
   charac[charInd].classList.add("active");
   mistake.innerText = mistk;
+}
+
+function initTimer() {
+  if (timeLeft > 0) {
+    timeLeft--;
+    timeTag.innerText = timeLeft;
+    if (timeLeft === 0) {
+      inputField.disabled=true;
+    }
+  } else {
+    clearInterval(timer);
+  }
 }
 
 pickRamdomQuote();
