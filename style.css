@@ -15,7 +15,8 @@ body {
 }
 .wrapper {
   /* background: whitesmoke; */
-  width: 800px;
+  width: 1000px;
+  height: 600px;
   padding: auto;
   padding: 12px;
 }
@@ -23,22 +24,36 @@ body {
   padding: 20px 13px 0;
 }
 .content-box .typing-test {
-  max-height: 255px;
+  max-height: 500px;
   overflow-y: auto;
 }
 .typing-test p {
   font-size: 30px;
   text-align: justify;
-  letter-spacing: 0.5px;
-  word-break: break-all;
+  letter-spacing: 1px;
+  word-break: keep-all;
   color: #cf6bdd;
 }
+/* .typing-test p span.active {
+  position: relative;
+} */
 .typing-test p span.correct {
   color: #eedaea;
 }
 .typing-test p span.incorrect {
   color: #ff5253;
 }
+/* typing-test p span.active {
+  color: white;
+} */
+/* typing-test p span.active::before{
+    content: "";
+    width: 5px;
+    height: 20px;
+    background: #ec7fff;
+    display: inline-block;
+    color: whitesmoke;
+} */
 .content-box .content {
   display: flex;
   margin-bottom: 17px;
@@ -90,4 +105,12 @@ body {
 }
 .result-details li b {
   font-weight: 500;
+}
+.input{
+  color:#101820;
+  background-color: #101820;
+  border: none;
+}
+.input:focus{
+  outline: none;
 }
