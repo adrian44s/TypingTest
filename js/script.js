@@ -15,13 +15,14 @@ function pickRamdomQuote() {
 
 function initTyping() {
   const charac = typingTest.querySelectorAll("span");
-  let typedChar = inputField.value.split('')[charInd];
-  if(charac[charInd].innerText === typedChar){
-    charac[charInd].classList.add('correct')
-  }else{
-    charac[charInd].classList.add('incorrect')
+  let typedChar = inputField.value.split("")[charInd];
+  if (charac[charInd].innerText === typedChar) {
+    charac[charInd].classList.add("correct");
+  } else {
+    charac[charInd].classList.add("incorrect");
   }
-  charInd++
+  charInd++;
+  charac[charInd].classList.add("active");
 }
 
 pickRamdomQuote();
