@@ -8,6 +8,7 @@ let timer;
 let maxTime = 60;
 let timeLeft = maxTime;
 let isTyping;
+const wpmTag = document.querySelector(".wpm span");
 
 function pickRamdomQuote() {
   let randomIn = Math.floor(Math.random() * quotes.length);
@@ -46,6 +47,9 @@ function initTyping() {
   charac.forEach((span) => span.classList.remove("active"));
   charac[charInd].classList.add("active");
   mistake.innerText = mistk;
+  let wpm = Math.round(((charInd - mistk) / 5 / (maxTime - timeLeft)) * 60);
+  wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
+  wpmTag.innerHTML = wpm;
 }
 
 function initTimer() {
@@ -53,7 +57,7 @@ function initTimer() {
     timeLeft--;
     timeTag.innerText = timeLeft;
     if (timeLeft === 0) {
-      inputField.disabled=true;
+      inputField.disabled = true;
     }
   } else {
     clearInterval(timer);
