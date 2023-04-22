@@ -9,14 +9,16 @@ let maxTime = 60;
 let timeLeft = maxTime;
 let isTyping;
 const wpmTag = document.querySelector(".wpm span");
+const retryBtn = document.querySelector("button");
 
 function pickRamdomQuote() {
   let randomIn = Math.floor(Math.random() * quotes.length);
+  typingTest.innerHTML = "";
   quotes[randomIn].split("").forEach((span) => {
     let stag = `<span>${span}</span>`;
     typingTest.innerHTML += stag;
   });
-
+  typingTest.querySelectorAll("span")[0].classList.add("active");
   document.addEventListener("keydown", () => inputField.focus());
   typingTest.addEventListener("click", () => inputField.focus());
 }
@@ -64,5 +66,18 @@ function initTimer() {
   }
 }
 
+function reset() {
+  pickRamdomQuote();
+  timeLeft = maxTime;
+  charInd = mistk = isTyping = 0;
+  timeTag.innerText = timeLeft;
+  mistake.innerText - mistake;
+  wpmTag.innerText = 0;
+  inputField.value = "";
+  clearInterval(timer);
+  inputField.disabled = false;
+}
+
 pickRamdomQuote();
 inputField.addEventListener("input", initTyping);
+retryBtn.addEventListener("click", reset);
