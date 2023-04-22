@@ -17,9 +17,9 @@ function initTyping() {
   const charac = typingTest.querySelectorAll("span");
   let typedChar = inputField.value.split('')[charInd];
   if(charac[charInd].innerText === typedChar){
-    charac[charInd].classList.add('Correct')
+    charac[charInd].classList.add('correct')
   }else{
-    charac[charInd].classList.add('Incorrect')
+    charac[charInd].classList.add('incorrect')
   }
   charInd++
 }
