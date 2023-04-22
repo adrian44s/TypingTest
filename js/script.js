@@ -33,7 +33,7 @@ function initTyping() {
     }
     charInd++;
   }
-
+  charac.forEach((span) => span.classList.remove("active"));
   charac[charInd].classList.add("active");
   mistake.innerText = mistk;
 }
