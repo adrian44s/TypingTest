@@ -1,6 +1,8 @@
 const typingTest = document.querySelector(".typing-test p");
 const inputField = document.querySelector(".wrapper .input");
 let charInd = 0;
+const mistake = document.querySelector(".mistake span");
+let mistk = 0;
 
 function pickRamdomQuote() {
   let randomIn = Math.floor(Math.random() * quotes.length);
@@ -16,13 +18,24 @@ function pickRamdomQuote() {
 function initTyping() {
   const charac = typingTest.querySelectorAll("span");
   let typedChar = inputField.value.split("")[charInd];
-  if (charac[charInd].innerText === typedChar) {
-    charac[charInd].classList.add("correct");
+  if (typedChar == null) {
+    charInd--;
+    if (charac[charInd].classList.contains("incorrect")) {
+      mistk--;
+    }
+    charac[charInd].classList.remove("correct", "incorrect");
   } else {
-    charac[charInd].classList.add("incorrect");
+    if (charac[charInd].innerText === typedChar) {
+      charac[charInd].classList.add("correct");
+    } else {
+      mistk++;
+      charac[charInd].classList.add("incorrect");
+    }
+    charInd++;
   }
-  charInd++;
+
   charac[charInd].classList.add("active");
+  mistake.innerText = mistk;
 }
 
 pickRamdomQuote();
