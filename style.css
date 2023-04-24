@@ -34,9 +34,7 @@ body {
   word-break: keep-all;
   color: #cf6bdd;
 }
-/* .typing-test p span.active {
-  position: relative;
-} */
+
 .typing-test p span.correct {
   color: #eedaea;
 }
@@ -55,11 +53,7 @@ typing-test p span.active {
     color: #eedaea;
     animation: cursor-blink 1.5s steps(2) infinite;
 }
-/* @keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
-} */
+
 .content-box .content {
   display: flex;
   margin-bottom: 17px;
