@@ -5,7 +5,7 @@ const mistake = document.querySelector(".mistake span");
 let mistk = 0;
 const timeTag = document.querySelector(".time span b");
 let timer;
-let maxTime = 60;
+const maxTime = 60;
 let timeLeft = maxTime;
 let isTyping;
 const wpmTag = document.querySelector(".wpm span");
