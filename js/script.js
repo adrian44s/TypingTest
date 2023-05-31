@@ -79,7 +79,7 @@ function reset() {
 }
 
 function pickLast() {
-  // asdasd
+  let hola = "Hola cv"
 }
 
 pickRamdomQuote();
