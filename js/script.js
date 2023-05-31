@@ -78,6 +78,10 @@ function reset() {
   inputField.disabled = false;
 }
 
+function pickLast() {
+  
+}
+
 pickRamdomQuote();
 inputField.addEventListener("input", initTyping);
 retryBtn.addEventListener("click", reset);
