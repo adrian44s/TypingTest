@@ -79,7 +79,7 @@ function reset() {
 }
 
 function pickLast() {
-  
+  // asdasd
 }
 
 pickRamdomQuote();
